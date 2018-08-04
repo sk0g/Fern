@@ -108,4 +108,10 @@ public class Person {
     public void setLatitude(double latitude) {
         this.latitude = latitude;
     }
+    
+    private static final Person holder = new Person();
+
+    public static Person getInstance() {
+        return holder;
+    }
 }
