@@ -2,6 +2,17 @@ package com.ymir.fern_app
 
 class MatchingAlgorithm {
 
+    fun getMatchRating(p1: Person, p2: Person): Double {
+        var interestMatchFactor = 1.0
+        // Implement interest similarity algorithm
+
+        var totalDistance:Double = Haversine(p1.latitude, p1.longitude,
+                                             p2.latitude, p2.longitude)
+        var distanceMatchFactor = Math.pow(2.0, totalDistance * -0.05)
+
+        return interestMatchFactor * distanceMatchFactor
+    }
+
     fun Haversine(lat1: Double, long1: Double, lat2: Double, long2: Double): Double {
         // Returns the distance between two co-ordinates,
         // given individual latitudes and longitudes
@@ -19,3 +30,5 @@ class MatchingAlgorithm {
         return approximateEarthRadius * c
     }
 }
+
+data class Person(val interests: ArrayList<String>, val latitude: Double, val longitude: Double)
