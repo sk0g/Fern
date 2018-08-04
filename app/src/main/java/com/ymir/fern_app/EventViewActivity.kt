@@ -28,5 +28,4 @@ class EventViewActivity : AppCompatActivity() {
             switchToProfile(applicationContext, view)
         }
     }
-
 }

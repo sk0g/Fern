@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:layout_margin="8dp"
     tools:context=".ProfileActivity">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -43,102 +44,81 @@
     </LinearLayout>
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/profile_activity_avatar"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
         app:srcCompat="@mipmap/profile" />
 
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="214dp"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/editText2"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="76dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="SecondName"
-        android:textSize="30sp"
-        android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/editText2"
+    <TextView
+        android:id="@+id/profile_activity_first_name"
         android:layout_width="213dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignTop="@+id/imageView2"
-        android:layout_marginEnd="20dp"
+        android:layout_toEndOf="@id/profile_activity_avatar"
+        android:layout_margin="20dp"
         android:ems="10"
-        android:inputType="textPersonName"
         android:text="FirstName"
         android:textSize="30sp"
         android:textStyle="bold" />
 
-    <EditText
-        android:id="@+id/editText8"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/profile_activity_last_name"
+        android:layout_width="214dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="234dp"
+        android:layout_toEndOf="@id/profile_activity_avatar"
+        android:layout_marginStart="20dp"
+        android:layout_below="@id/profile_activity_first_name"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Computer Science"
+        android:text="SecondName"
         android:textSize="30sp"
         android:textStyle="bold" />
 
-    <EditText
-        android:id="@+id/editText7"
+    <TextView
+        android:id="@+id/profile_activity_uni"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_below="@id/profile_activity_last_name"
+        android:layout_margin="8dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="183dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Gold Coast Campus"
-        android:textSize="30sp"
-        android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/editText6"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="134dp"
-        android:ems="10"
-        android:inputType="textPersonName"
         android:text="GriffithUni"
         android:textSize="30sp"
         android:textStyle="bold" />
 
-    <EditText
-        android:id="@+id/textView2"
+    <TextView
+        android:id="@+id/profile_activity_campus"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/editText8"
-        android:layout_marginBottom="217dp"
-        android:text="Bio:"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/profile_activity_uni"
+        android:layout_margin="8dp"
+        android:ems="10"
+        android:text="Gold Coast Campus"
         android:textSize="30sp"
         android:textStyle="bold" />
 
-    <ScrollView
-        android:layout_width="339dp"
-        android:layout_height="match_parent"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="62dp">
+    <TextView
+        android:id="@+id/profile_activity_degree"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile_activity_campus"
+        android:layout_margin="8dp"
+        android:ems="10"
+        android:text="Computer Science"
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" />
-    </ScrollView>
+    <TextView
+        android:id="@+id/profile_activity_bio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile_activity_degree"
+        android:layout_margin="8dp"
+        android:text="Bio:"
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>
