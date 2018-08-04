@@ -8,6 +8,7 @@
     tools:context=".ProfileActivity">
 
     <LinearLayout
+        android:id="@+id/activity_profile_button_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="?android:attr/buttonBarStyle"
@@ -59,11 +60,10 @@
 
     <TextView
         android:id="@+id/profile_activity_first_name"
-        android:layout_width="213dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toEndOf="@id/profile_activity_avatar"
         android:layout_margin="20dp"
-        android:ems="10"
         android:text="FirstName"
         android:textSize="30sp"
         android:textStyle="bold" />
