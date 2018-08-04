@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="8dp"
     tools:context=".ProfileActivity">
     <LinearLayout
         android:layout_width="match_parent"
@@ -79,7 +80,7 @@
 
     <EditText
         android:id="@+id/editText8"
-        android:layout_width="339dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
@@ -92,7 +93,7 @@
 
     <EditText
         android:id="@+id/editText7"
-        android:layout_width="339dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
@@ -105,7 +106,7 @@
 
     <EditText
         android:id="@+id/editText6"
-        android:layout_width="339dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
@@ -118,7 +119,7 @@
 
     <EditText
         android:id="@+id/textView2"
-        android:layout_width="168dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignStart="@+id/editText8"
@@ -129,7 +130,7 @@
 
     <ScrollView
         android:layout_width="339dp"
-        android:layout_height="145dp"
+        android:layout_height="match_parent"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="62dp">
