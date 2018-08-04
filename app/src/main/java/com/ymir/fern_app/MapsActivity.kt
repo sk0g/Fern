@@ -22,6 +22,7 @@ import com.google.android.gms.location.places.Places
 import com.google.android.gms.maps.*
 
 import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.gms.tasks.Task
@@ -79,7 +80,10 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
         // TODO: Draw all surrounding events/ people.
         // TODO: Toggle for distance ranges. Maybe?
+
+        markOnMap(getMarker())
     }
+
 
     fun moveToCurrentLocation() {
         try {
@@ -110,4 +114,21 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         val intent = Intent(applicationContext, ProfileActivity::class.java)
         startActivity(intent)
     }
+
+    fun markOnMap(marker: CustomMarker) {
+        mMap.addMarker(MarkerOptions()
+                .position(LatLng(marker.lat, marker.long))
+                .title(marker.description))
+        Toast.makeText(this, "Marker printed!", Toast.LENGTH_SHORT).show()
+    }
+
+    fun getMarker(): CustomMarker {
+        // TODO: Return surrounding markers from Database
+        // for now, dummy data is returned to test drawing functionality
+
+        return CustomMarker(true,  -27.9595,153.3814, "Rad party at uni hospital")
+    }
 }
+
+data class CustomMarker(val isPerson: Boolean, val lat: Double, val long: Double, val description: String) { }
+
