@@ -3,12 +3,21 @@ package com.ymir.fern_app
 class MatchingAlgorithm {
 
     fun getMatchRating(p1: Person, p2: Person): Double {
+        // Returns a Double match score, between 0-100
         var interestMatchFactor = 1.0
-        // Implement interest similarity algorithm
 
-        var totalDistance:Double = Haversine(p1.latitude, p1.longitude,
+        val smallerLength = minOf(p1.interests.size, p2.interests.size)
+        var commonInterests = 0
+        for (interest in p1.interests) {
+            if (interest in p2.interests) {
+                commonInterests += 1
+            }
+        }
+        interestMatchFactor = (smallerLength.toDouble() / commonInterests * 100)
+
+        val totalDistance:Double = Haversine(p1.latitude, p1.longitude,
                                              p2.latitude, p2.longitude)
-        var distanceMatchFactor = Math.pow(2.0, totalDistance * -0.05)
+        val distanceMatchFactor = Math.pow(2.0, totalDistance * -0.05)
 
         return interestMatchFactor * distanceMatchFactor
     }
