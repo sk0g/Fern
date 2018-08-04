@@ -5,9 +5,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    android:layout_margin="8dp"
     android:orientation="vertical"
-    android:layout_margin="8dp">
+    tools:context=".EventViewActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ExpandableListView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </ExpandableListView>
+
+        </LinearLayout>
+
+    </ScrollView>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,27 +35,33 @@
         android:gravity="center|bottom">
 
         <Button
-            android:id="@+id/activity_main_people_button"
+            android:id="@+id/activity_events_events_button"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             style="?android:attr/buttonBarButtonStyle"
-            android:ems="8"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="@string/events"/>
+
+        <Button
+            android:id="@+id/activity_events_people_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            style="?android:attr/buttonBarButtonStyle"
             android:text="@string/people"/>
 
         <Button
-            android:id="@+id/activity_main_map_button"
+            android:id="@+id/activity_events_map_button"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             style="?android:attr/buttonBarButtonStyle"
-            android:ems="8"
             android:text="@string/map"/>
 
         <Button
-            android:id="@+id/activity_main_profile_button"
+            android:id="@+id/activity_events_profile_button"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             style="?android:attr/buttonBarButtonStyle"
-            android:ems="8"
             android:text="@string/profile"/>
 
     </LinearLayout>

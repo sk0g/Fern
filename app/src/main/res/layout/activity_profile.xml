@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ProfileActivity">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,11 +16,11 @@
 
         <Button
             android:id="@+id/activity_profile_people_button"
-            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            style="?android:attr/buttonBarButtonStyle"
             android:minEms="8"
-            android:text="@string/people" />
+            android:text="@string/people"/>
 
         <Button
             android:id="@+id/activity_profile_maps_button"
@@ -40,104 +41,5 @@
             android:textSize="20sp"/>
 
     </LinearLayout>
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="25dp"
-        app:srcCompat="@mipmap/Profile_Picture_Default" />
-
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="214dp"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/editText2"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="76dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="SecondName"
-        android:textSize="30sp"
-        android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="213dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignTop="@+id/imageView2"
-        android:layout_marginEnd="20dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="FirstName"
-        android:textSize="30sp"
-        android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/editText8"
-        android:layout_width="339dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="234dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Computer Science"
-        android:textSize="30sp"
-        android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/editText7"
-        android:layout_width="339dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="183dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Gold Coast Campus"
-        android:textSize="30sp"
-        android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/editText6"
-        android:layout_width="339dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="134dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="GriffithUni"
-        android:textSize="30sp"
-        android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/textView2"
-        android:layout_width="168dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/editText8"
-        android:layout_marginBottom="217dp"
-        android:text="Bio:"
-        android:textSize="30sp"
-        android:textStyle="bold" />
-
-    <ScrollView
-        android:layout_width="339dp"
-        android:layout_height="145dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="62dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" />
-    </ScrollView>
 
 </RelativeLayout>
