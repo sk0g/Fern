@@ -11,6 +11,7 @@ import android.provider.SyncStateContract
 import android.support.v4.app.ActivityCompat
 import android.support.v4.content.ContextCompat
 import android.util.Log
+import android.widget.Button
 import android.widget.Toast
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
@@ -25,6 +26,7 @@ import com.google.android.gms.tasks.Task
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
+    private lateinit var mMapButton: Button
     private lateinit var mMap: GoogleMap
     private val RECORD_REQUEST_CODE = 101
     private lateinit var mLocationProvider: FusedLocationProviderClient
@@ -36,6 +38,11 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         val mapFragment = supportFragmentManager
                 .findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
+
+        mMapButton = findViewById(R.id.activity_maps_maps_button)
+        mMapButton.setOnClickListener{view ->
+            moveToCurrentLocation()
+        }
 
         mLocationProvider = LocationServices.getFusedLocationProviderClient(this)
     }
@@ -60,6 +67,10 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
         mMap.isMyLocationEnabled = true
 
+        moveToCurrentLocation()
+    }
+
+    fun moveToCurrentLocation() {
         try {
             var myLocation = mLocationProvider.lastLocation.addOnSuccessListener { location: Location ->
                 moveToLocation(location)
