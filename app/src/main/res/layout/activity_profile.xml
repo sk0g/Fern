@@ -16,11 +16,17 @@
         android:gravity="center|bottom">
 
         <Button
+            android:id="@+id/activity_profile_events_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            style="?android:attr/buttonBarButtonStyle"
+            android:text="@string/events"/>
+
+        <Button
             android:id="@+id/activity_profile_people_button"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:minEms="8"
             android:text="@string/people" />
 
         <Button
@@ -28,7 +34,6 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             style="?android:attr/buttonBarButtonStyle"
-            android:ems="8"
             android:text="@string/map"/>
 
         <Button
@@ -38,7 +43,6 @@
             style="?android:attr/buttonBarButtonStyle"
             android:text="@string/profile"
             android:textStyle="bold"
-            android:ems="8"
             android:textSize="20sp"/>
 
     </LinearLayout>
