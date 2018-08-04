@@ -2,7 +2,7 @@ package com.ymir.fern_app
 
 class MatchingAlgorithm {
 
-    fun getMatchRating(p1: Person, p2: Person): Double {
+    fun getMatchRating(p1: PersonObject, p2: PersonObject): Double {
         // Returns a Double match score, between 0-100
         var interestMatchFactor = 1.0
 
@@ -40,4 +40,4 @@ class MatchingAlgorithm {
     }
 }
 
-data class Person(val interests: ArrayList<String>, val latitude: Double, val longitude: Double)
+data class PersonObject(val interests: ArrayList<String>, val latitude: Double, val longitude: Double)
