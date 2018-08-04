@@ -27,12 +27,14 @@ import com.google.android.gms.maps.model.*
 
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.gms.tasks.Task
+import com.ymir.fern_app.ActivitySwitcher.switchToEvents
 import com.ymir.fern_app.ActivitySwitcher.switchToProfile
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
     lateinit var mMapButton: Button
     lateinit var mProfileButton: Button
+    lateinit var mEventsButton: Button
 
     private lateinit var mMap: GoogleMap
     private val RECORD_REQUEST_CODE = 101
@@ -54,6 +56,11 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         mProfileButton = findViewById(R.id.activity_maps_profile_button)
         mProfileButton.setOnClickListener {view ->
             switchToProfile(applicationContext, view)
+        }
+
+        mEventsButton = findViewById(R.id.activity_maps_events_button)
+        mEventsButton.setOnClickListener {view ->
+            switchToEvents(applicationContext, view)
         }
 
         mLocationProvider = LocationServices.getFusedLocationProviderClient(this)
