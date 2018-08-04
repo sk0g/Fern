@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import com.ymir.fern_app.ActivitySwitcher.switchToMap
 
 class ProfileActivity : AppCompatActivity() {
 
@@ -16,12 +17,7 @@ class ProfileActivity : AppCompatActivity() {
 
         mMapsButton = findViewById(R.id.activity_profile_maps_button)
         mMapsButton.setOnClickListener {view ->
-            switchToMap(view)
+            switchToMap(applicationContext, view)
         }
-    }
-
-    fun switchToMap(view: View) {
-        val intent = Intent(applicationContext, MapsActivity::class.java)
-        startActivity(intent)
     }
 }

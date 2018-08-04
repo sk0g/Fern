@@ -27,6 +27,7 @@ import com.google.android.gms.maps.model.*
 
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.gms.tasks.Task
+import com.ymir.fern_app.ActivitySwitcher.switchToProfile
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
@@ -52,7 +53,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
         mProfileButton = findViewById(R.id.activity_maps_profile_button)
         mProfileButton.setOnClickListener {view ->
-            switchToProfile(view)
+            switchToProfile(applicationContext, view)
         }
 
         mLocationProvider = LocationServices.getFusedLocationProviderClient(this)
@@ -114,11 +115,6 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                 RECORD_REQUEST_CODE)
     }
 
-    fun switchToProfile(view: View) {
-        val intent = Intent(applicationContext, ProfileActivity::class.java)
-        startActivity(intent)
-    }
-
     fun markOnMap(marker: CustomMarker) {
         val icon: Int = if (marker.isPerson) {
             R.drawable.avatar_icon
@@ -146,5 +142,4 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     }
 }
 
-data class CustomMarker(val isPerson: Boolean, val lat: Double, val long: Double, val description: String) { }
-
+data class CustomMarker(val isPerson: Boolean, val lat: Double, val long: Double, val description: String)

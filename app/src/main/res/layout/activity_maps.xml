@@ -27,11 +27,17 @@
         android:gravity="center|bottom">
 
         <Button
+            android:id="@+id/activity_maps_events_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            style="?android:attr/buttonBarButtonStyle"
+            android:text="@string/events"/>
+
+        <Button
             android:id="@+id/activity_maps_people_button"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             style="?android:attr/buttonBarButtonStyle"
-            android:ems="8"
             android:text="@string/people"/>
 
         <Button
@@ -41,7 +47,6 @@
             style="?android:attr/buttonBarButtonStyle"
             android:text="@string/map"
             android:textStyle="bold"
-            android:ems="8"
             android:textSize="20sp"/>
 
         <Button
@@ -49,7 +54,6 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             style="?android:attr/buttonBarButtonStyle"
-            android:ems="8"
             android:text="@string/profile"/>
 
     </LinearLayout>
