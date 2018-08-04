@@ -31,7 +31,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun switchToProfile(view: View) {
-        val intent = Intent(applicationContext, ProfileActivity::class.java)
-        startActivity(intent)
+
     }
 }
