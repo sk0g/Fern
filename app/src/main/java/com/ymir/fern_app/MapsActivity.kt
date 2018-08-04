@@ -4,6 +4,9 @@ import android.Manifest
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.graphics.BitmapFactory
+import android.graphics.drawable.BitmapDrawable
+import android.graphics.drawable.Drawable
 import android.location.Location
 import android.location.LocationProvider
 import android.support.v7.app.AppCompatActivity
@@ -20,6 +23,7 @@ import com.google.android.gms.location.LocationServices
 import com.google.android.gms.location.places.PlaceDetectionClient
 import com.google.android.gms.location.places.Places
 import com.google.android.gms.maps.*
+import com.google.android.gms.maps.model.BitmapDescriptorFactory
 
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.Marker
@@ -118,9 +122,17 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     }
 
     fun markOnMap(marker: CustomMarker) {
+        val icon: Int = if (marker.isPerson) {
+            R.drawable.avatar_icon
+        } else {
+            R.drawable.calendar_icon
+        }
+
         mMap.addMarker(MarkerOptions()
                 .position(LatLng(marker.lat, marker.long))
-                .title(marker.description))
+                .title(marker.description)
+                .alpha(100f))
+                .setIcon(BitmapDescriptorFactory.fromResource(icon))
     }
 
     fun getMarkers(): ArrayList<CustomMarker> {
