@@ -1,18 +1,41 @@
 package com.ymir.fern_app;
 
 import java.util.ArrayList;
+import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.os.AsyncTask;
+import android.os.StrictMode;
+//import android.support.v7.app.ActionBarActivity;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ProgressBar;
+import android.widget.Toast;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 public class Person {
+    @com.google.gson.annotations.SerializedName("id")
     private int personId;
+    @com.google.gson.annotations.SerializedName("firstName")
     private String firstName;
+    @com.google.gson.annotations.SerializedName("secondName")
     private String secondName;
+    @com.google.gson.annotations.SerializedName("university")
     private String university;
+    @com.google.gson.annotations.SerializedName("campus")
     private String campus;
+    @com.google.gson.annotations.SerializedName("degree")
     private String degree;
+    @com.google.gson.annotations.SerializedName("bio")
     private String bio;
     private double longitude;
     private double latitude;
-
 
     public int getPersonId() {
         return personId;
@@ -84,11 +107,5 @@ public class Person {
 
     public void setLatitude(double latitude) {
         this.latitude = latitude;
-    }
-
-    private static final Person holder = new Person();
-
-    public static Person getInstance() {
-        return holder;
     }
 }
