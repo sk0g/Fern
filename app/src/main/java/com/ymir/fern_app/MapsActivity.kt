@@ -68,6 +68,9 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         mMap.isMyLocationEnabled = true
 
         moveToCurrentLocation()
+
+        // TODO: Draw all surrounding events/ people.
+        // TODO: Toggle for distance ranges. Maybe?
     }
 
     fun moveToCurrentLocation() {
