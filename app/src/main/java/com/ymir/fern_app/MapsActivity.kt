@@ -2,6 +2,7 @@ package com.ymir.fern_app
 
 import android.Manifest
 import android.content.Context
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.location.Location
 import android.location.LocationProvider
@@ -11,6 +12,7 @@ import android.provider.SyncStateContract
 import android.support.v4.app.ActivityCompat
 import android.support.v4.content.ContextCompat
 import android.util.Log
+import android.view.View
 import android.widget.Button
 import android.widget.Toast
 import com.google.android.gms.location.FusedLocationProviderClient
@@ -26,7 +28,9 @@ import com.google.android.gms.tasks.Task
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
-    private lateinit var mMapButton: Button
+    lateinit var mMapButton: Button
+    lateinit var mProfileButton: Button
+
     private lateinit var mMap: GoogleMap
     private val RECORD_REQUEST_CODE = 101
     private lateinit var mLocationProvider: FusedLocationProviderClient
@@ -40,8 +44,13 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         mapFragment.getMapAsync(this)
 
         mMapButton = findViewById(R.id.activity_maps_maps_button)
-        mMapButton.setOnClickListener{view ->
+        mMapButton.setOnClickListener {view ->
             moveToCurrentLocation()
+        }
+
+        mProfileButton = findViewById(R.id.activity_maps_profile_button)
+        mProfileButton.setOnClickListener {view ->
+            switchToProfile(view)
         }
 
         mLocationProvider = LocationServices.getFusedLocationProviderClient(this)
@@ -96,5 +105,10 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         ActivityCompat.requestPermissions(this,
                 arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),
                 RECORD_REQUEST_CODE)
+    }
+
+    fun switchToProfile(view: View) {
+        val intent = Intent(applicationContext, ProfileActivity::class.java)
+        startActivity(intent)
     }
 }

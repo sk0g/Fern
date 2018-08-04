@@ -6,32 +6,22 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 
-class MainActivity : AppCompatActivity() {
+class ProfileActivity : AppCompatActivity() {
+
     lateinit var mMapsButton: Button
-    lateinit var mProfileButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_profile)
 
-        mMapsButton = findViewById(R.id.activity_main_map_button)
+        mMapsButton = findViewById(R.id.activity_profile_maps_button)
         mMapsButton.setOnClickListener {view ->
             switchToMap(view)
-        }
-
-        mProfileButton = findViewById(R.id.activity_main_profile_button)
-        mProfileButton.setOnClickListener {view ->
-            switchToProfile(view)
         }
     }
 
     fun switchToMap(view: View) {
         val intent = Intent(applicationContext, MapsActivity::class.java)
-        startActivity(intent)
-    }
-
-    fun switchToProfile(view: View) {
-        val intent = Intent(applicationContext, ProfileActivity::class.java)
         startActivity(intent)
     }
 }
