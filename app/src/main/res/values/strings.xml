@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Fern</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="map">map</string>
+    <string name="profile">profile</string>
+    <string name="people">people</string>
+</resources>
