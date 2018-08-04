@@ -81,13 +81,15 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         // TODO: Draw all surrounding events/ people.
         // TODO: Toggle for distance ranges. Maybe?
 
-        markOnMap(getMarker())
+        for (marker in getMarkers()) {
+            markOnMap(marker)
+        }
     }
 
 
     fun moveToCurrentLocation() {
         try {
-            var myLocation = mLocationProvider.lastLocation.addOnSuccessListener { location: Location ->
+            mLocationProvider.lastLocation.addOnSuccessListener { location: Location ->
                 moveToLocation(location)
             }
         } catch (e: SecurityException) {
@@ -119,14 +121,18 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         mMap.addMarker(MarkerOptions()
                 .position(LatLng(marker.lat, marker.long))
                 .title(marker.description))
-        Toast.makeText(this, "Marker printed!", Toast.LENGTH_SHORT).show()
     }
 
-    fun getMarker(): CustomMarker {
+    fun getMarkers(): ArrayList<CustomMarker> {
         // TODO: Return surrounding markers from Database
         // for now, dummy data is returned to test drawing functionality
 
-        return CustomMarker(true,  -27.9595,153.3814, "Rad party at uni hospital")
+        val list = arrayListOf<CustomMarker>(
+            CustomMarker(false,  -27.9595,153.3814, "Rad party at uni hospital"),
+            CustomMarker(true, -27.9620592, 153.3778157, "Bored at library :(")
+        )
+
+        return list
     }
 }
 
