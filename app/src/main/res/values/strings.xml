@@ -4,4 +4,12 @@
     <string name="profile">PROFILE</string>
     <string name="people">PEOPLE</string>
     <string name="events">EVENTS</string>
+    <string name="enter_details_prompt">Please enter your details below</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="university">University</string>
+    <string name="campus">Campus</string>
+    <string name="degree">Degree</string>
+    <string name="bio">Tell us a bit about yourself</string>
+    <string name="submit">Submit</string>
 </resources>

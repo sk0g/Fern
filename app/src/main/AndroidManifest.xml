@@ -25,6 +25,7 @@
             android:value="@string/google_maps_key" />
 
         <activity android:name=".ProfileActivity" />
+        <activity android:name=".CreateProfileActivity"></activity>
     </application>
 
 </manifest>

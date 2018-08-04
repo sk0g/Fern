@@ -13,7 +13,6 @@ public class Person {
     private double longitude;
     private double latitude;
 
-    
 
     public int getPersonId() {
         return personId;
@@ -85,5 +84,11 @@ public class Person {
 
     public void setLatitude(double latitude) {
         this.latitude = latitude;
+    }
+
+    private static final Person holder = new Person();
+
+    public static Person getInstance() {
+        return holder;
     }
 }
