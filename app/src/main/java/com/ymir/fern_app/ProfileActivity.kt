@@ -21,7 +21,7 @@ class ProfileActivity : AppCompatActivity() {
         setContentView(R.layout.activity_profile)
 
         var person:Person = Person.getInstance()
-        if (person.firstName == null) { switchToProfileCreate(applicationContext)}
+        if (person.firstName == null || person.bio == null) { switchToProfileCreate(applicationContext)}
         else { fillDetails(person) }
 
         mMapButton = findViewById(R.id.activity_profile_maps_button)
