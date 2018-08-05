@@ -9,25 +9,16 @@
     android:orientation="vertical"
     tools:context=".EventViewActivity">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+    <ListView
+        android:id="@+id/event_list_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/event_view_button_bar">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <ExpandableListView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-            </ExpandableListView>
-
-        </LinearLayout>
-
-    </ScrollView>
+    </ListView>
 
     <LinearLayout
+        android:id="@+id/event_view_button_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="?android:attr/buttonBarStyle"

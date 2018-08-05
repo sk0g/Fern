@@ -1,32 +1,24 @@
 package com.ymir.fern_app
 
 import android.Manifest
-import android.content.Context
-import android.content.Intent
 import android.content.pm.PackageManager
-import android.graphics.BitmapFactory
-import android.graphics.drawable.BitmapDrawable
-import android.graphics.drawable.Drawable
 import android.location.Location
-import android.location.LocationProvider
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.SyncStateContract
 import android.support.v4.app.ActivityCompat
 import android.support.v4.content.ContextCompat
+import android.support.v7.app.AppCompatActivity
 import android.util.Log
-import android.view.View
 import android.widget.Button
-import android.widget.Toast
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
-import com.google.android.gms.location.places.PlaceDetectionClient
-import com.google.android.gms.location.places.Places
-import com.google.android.gms.maps.*
-import com.google.android.gms.maps.model.*
-
-import com.google.android.gms.tasks.OnCompleteListener
-import com.google.android.gms.tasks.Task
+import com.google.android.gms.maps.CameraUpdateFactory
+import com.google.android.gms.maps.GoogleMap
+import com.google.android.gms.maps.OnMapReadyCallback
+import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.gms.maps.model.BitmapDescriptorFactory
+import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.MapStyleOptions
+import com.google.android.gms.maps.model.MarkerOptions
 import com.ymir.fern_app.ActivitySwitcher.switchToEvents
 import com.ymir.fern_app.ActivitySwitcher.switchToProfile
 
@@ -111,7 +103,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(
                 LatLng(mKnownLocation.latitude,
                        mKnownLocation.longitude),
-                13.0f
+                16.0f
             )
         )
     }
@@ -145,9 +137,9 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
             CustomMarker(true, -27.9620592, 153.3778157, "Bored at library :("), 
             CustomMarker(false, -27.962996, 153.381125, "Omg exam tomorrow pls help"), 
             CustomMarker(true, -27.961156, 153.380912, "Exam tomorrow. Haven't studied. Anyone need a drinking partner?"), 
-            CustomMarker(false, -27.963354, 153.383775, "LAN Party, ICT Students only")
+            CustomMarker(false, -27.963354, 153.383775, "LAN Party, ICT Students only"),
             CustomMarker(false, -27.962177, 153.380284, "Yoga & Tai-Chi outside uni library"), 
-            CustomMarker(true, -27.963660, 153.383009, "Arrays start at 1 right1//1?!?!?!?")
+            CustomMarker(true, -27.963660, 153.383009, "Arrays start at 1 right1//1?!?!?!?"),
             CustomMarker(false, -27.963138, 153.382828, "Comp Sci catch up before 1806ICT culls over half our student base yeet")
         )
 
