@@ -141,8 +141,14 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         // for now, dummy data is returned to test drawing functionality
 
         val list = arrayListOf<CustomMarker>(
-            CustomMarker(false,  -27.9595,153.3814, "Rad party at uni hospital"),
-            CustomMarker(true, -27.9620592, 153.3778157, "Bored at library :(")
+            CustomMarker(false,  -27.9595, 153.3814, "Rad party at uni hospital"),
+            CustomMarker(true, -27.9620592, 153.3778157, "Bored at library :("), 
+            CustomMarker(false, -27.962996, 153.381125, "Omg exam tomorrow pls help"), 
+            CustomMarker(true, -27.961156, 153.380912, "Exam tomorrow. Haven't studied. Anyone need a drinking partner?"), 
+            CustomMarker(false, -27.963354, 153.383775, "LAN Party, ICT Students only")
+            CustomMarker(false, -27.962177, 153.380284, "Yoga & Tai-Chi outside uni library"), 
+            CustomMarker(true, -27.963660, 153.383009, "Arrays start at 1 right1//1?!?!?!?")
+            CustomMarker(false, -27.963138, 153.382828, "Comp Sci catch up before 1806ICT culls over half our student base yeet")
         )
 
         return list
