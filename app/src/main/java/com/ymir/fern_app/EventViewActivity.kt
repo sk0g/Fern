@@ -5,12 +5,14 @@ import android.support.v7.app.AppCompatActivity
 import android.widget.Button
 import android.widget.ListView
 import com.ymir.fern_app.ActivitySwitcher.switchToMap
+import com.ymir.fern_app.ActivitySwitcher.switchToPeople
 import com.ymir.fern_app.ActivitySwitcher.switchToProfile
 
 class EventViewActivity : AppCompatActivity() {
 
     lateinit var mMapButton: Button
     lateinit var mProfileButton: Button
+    lateinit var mPeopleButton: Button
     lateinit var listview: ListView
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,6 +27,11 @@ class EventViewActivity : AppCompatActivity() {
         mProfileButton = findViewById(R.id.activity_events_profile_button)
         mProfileButton.setOnClickListener { view ->
             switchToProfile(applicationContext, view)
+        }
+
+        mPeopleButton = findViewById(R.id.activity_events_people_button)
+        mPeopleButton.setOnClickListener { view ->
+            switchToPeople(applicationContext, view)
         }
 
         listview = findViewById(R.id.event_list_view)

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp"
+    android:orientation="vertical"
+    tools:context=".EventViewActivity">
+
+    <ListView
+        android:id="@+id/people_list_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/event_view_button_bar">
+
+    </ListView>
+
+    <LinearLayout
+        android:id="@+id/people_view_button_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="?android:attr/buttonBarStyle"
+        android:layout_alignParentBottom="true"
+        android:gravity="center|bottom">
+
+        <Button
+            android:id="@+id/activity_people_events_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            style="?android:attr/buttonBarButtonStyle"
+            android:text="@string/events"/>
+
+        <Button
+            android:id="@+id/activity_people_people_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            style="?android:attr/buttonBarButtonStyle"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="@string/people"/>
+
+        <Button
+            android:id="@+id/activity_people_map_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            style="?android:attr/buttonBarButtonStyle"
+            android:text="@string/map"/>
+
+        <Button
+            android:id="@+id/activity_people_profile_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            style="?android:attr/buttonBarButtonStyle"
+            android:text="@string/profile"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

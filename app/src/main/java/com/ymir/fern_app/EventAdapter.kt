@@ -31,10 +31,10 @@ class EventAdapter(val context: Context,
 
         val desc = rowView.findViewById(R.id.event_row_description) as TextView
         val comm = rowView.findViewById(R.id.event_row_common) as TextView
-        val dist = rowView.findViewById(R.id.event_row_common) as TextView
+        val dist = rowView.findViewById(R.id.event_row_distance) as TextView
 
         desc.text = event.description
-        comm.text = event.commonInterests
+        comm.text = ("Shared interests: " + event.commonInterests)
         dist.text = event.distance
 
         return rowView

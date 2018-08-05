@@ -27,6 +27,7 @@
 
         <activity android:name=".ProfileActivity" />
         <activity android:name=".CreateProfileActivity"></activity>
+        <activity android:name=".PeopleViewActivity"></activity>
     </application>
 
 </manifest>

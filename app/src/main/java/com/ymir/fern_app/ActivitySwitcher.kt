@@ -26,8 +26,8 @@ object ActivitySwitcher {
         )
     }
 
-/*    fun switchToPeople(context: Context, view: View) {
-        val intent  = Intent(context, PeopleActivity::class.java)
+    fun switchToPeople(context: Context, view: View) {
+        val intent  = Intent(context, PeopleViewActivity::class.java)
         context.startActivity(intent)
-    }*/
+    }
 }
